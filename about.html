@@ -1,34 +1,177 @@
 <!doctype html>
 <html lang="en">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>About Me — Yee Siang Tey</title><link rel="stylesheet" href="style.css"></head>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About — Tey Yee Siang</title>
+<meta name="description" content="About Tey Yee Siang — NUS CS (AI) student from Malaysia, building AI systems and full-stack products in Singapore. How I work, what I'm learning, and how to reach me.">
+<meta name="author" content="Tey Yee Siang">
+<meta name="theme-color" content="#0e7490">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="About — Tey Yee Siang">
+<meta property="og:description" content="How I work, what I'm learning, and how to reach me.">
+<meta property="og:url" content="https://personalwebsite-eight-tawny-92.vercel.app/about.html">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230e7490'/%3E%3Ctext x='50%25' y='54%25' text-anchor='middle' dominant-baseline='middle' font-family='Arial,sans-serif' font-weight='800' font-size='28' fill='white'%3EYS%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script>document.documentElement.classList.add('js');try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+</head>
 <body>
-<header><nav class="nav">
-<a class="logo" href="index.html">YS<span>.</span>Tey</a>
-<button class="hamburger" aria-label="menu" onclick="document.querySelector('.links').classList.toggle('open')">☰</button>
-<div class="links"><a href="index.html">Home</a><a href="resume.html">Resume</a><a href="projects.html">Projects</a><a href="about.html" class="active">About Me</a></div>
-</nav></header>
-<main>
-<h1 class="fade-up">About Me</h1>
-<div class="grid2">
-<div class="card fade-up d1">
-<div class="avatar" style="margin:0 0 1rem">YS</div>
-<p>Hi, I'm <strong>Yee Siang</strong> — Year 3 CS @ NUS (AI). Grew up in Malaysia, now in Singapore.</p>
-<p>I like building things people actually use: smallest thing that solves it, then measure. Happy writing model code, APIs, or UI.</p>
-<p class="meta">Beyond code: President of NUS Malaysian Students' League (40+ exco, 400+ students). Orbital Honourable Mention. Hackathons: Tech4City, TikTok TechJam, Hack4Good.</p>
-<p><span class="tag">LLM Systems</span><span class="tag">RAG</span><span class="tag">DevOps</span><span class="tag">Full-Stack</span></p>
-</div>
-<div class="card fade-up d2">
-<h2>Contact</h2>
-<p>📍 Singapore<br>📞 +65 8800 2042<br>✉️ <a href="mailto:ystey@u.nus.edu">ystey@u.nus.edu</a></p>
-<p>🔗 <a href="https://www.linkedin.com/in/yee-siang-tey/" target="_blank" rel="noopener">linkedin.com/in/yee-siang-tey</a><br>💻 <a href="https://github.com/YSTey0808" target="_blank" rel="noopener">github.com/YSTey0808</a></p>
-<h3>Open to</h3><p class="meta">Summer 2027 internships — SWE, AI/ML, LLM Applied AI, SRE/Infra.</p>
-<div class="btns"><a class="btn primary" href="mailto:ystey@u.nus.edu">Email Me</a>
-<a class="btn ghost" href="https://www.linkedin.com/in/yee-siang-tey/" target="_blank" rel="noopener">LinkedIn ↗</a></div>
-</div>
-</div>
+<a class="skip" href="#main">Skip to content</a>
+<div class="progress" aria-hidden="true"></div>
+
+<header class="site-header">
+  <nav class="nav" aria-label="Primary">
+    <a class="logo" href="index.html" aria-label="Tey Yee Siang — home">YS<span>.</span>Tey</a>
+    <div class="links" id="nav-links">
+      <a href="index.html">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="resume.html">Resume</a>
+      <a href="about.html" aria-current="page">About</a>
+    </div>
+    <div class="nav-actions">
+      <button class="icon-btn theme-toggle" type="button" aria-label="Toggle dark mode"><svg class="ic moon"><use href="#i-moon"/></svg><svg class="ic sun"><use href="#i-sun"/></svg></button>
+      <a class="btn btn-sm primary nav-cta" href="mailto:ystey@u.nus.edu">Let's talk</a>
+      <button class="icon-btn hamburger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+</header>
+
+<main id="main">
+  <section class="page-hero">
+    <div class="hero-bg" aria-hidden="true"><span class="blob b1"></span><div class="grid-bg"></div></div>
+    <div class="container about-grid">
+      <div class="prose">
+        <p class="eyebrow reveal">About me</p>
+        <h1 class="reveal" style="--i:1">Hi, I'm <span class="grad">Yee Siang</span>.</h1>
+        <p class="big reveal" style="--i:2">I'm a Year 3 Computer Science student at NUS, specialising in AI. I grew up in Malaysia and now study and work in Singapore.</p>
+        <p class="reveal" style="--i:3">I like building things people actually use. That has taken me through two software internships, four hackathons, and a student organisation of 400+ members. Each time I come back to the same approach: <strong>understand the problem properly, build the smallest thing that solves it, then measure whether it worked.</strong></p>
+        <p class="reveal" style="--i:4">Most of my time outside coursework goes to <strong>AI systems and full-stack products</strong>: retrieval and RAG pipelines, evaluation, and the infrastructure that makes a model reliable enough to ship. I'm just as happy writing the model code, the API behind it, or the interface someone clicks.</p>
+        <p class="reveal" style="--i:5">As <strong>President of the NUS Malaysian Students' League</strong>, I learned as much about working with people as I have from any engineering project.</p>
+      </div>
+
+      <aside class="card profile-card reveal tilt" style="--i:2" aria-label="Quick facts">
+        <div class="avatar-wrap"><div class="avatar">YS</div></div>
+        <h2 class="profile-name">Tey Yee Siang</h2>
+        <p class="profile-role">AI & Full-Stack Engineer</p>
+        <ul class="facts" style="text-align:left">
+          <li><svg class="ic"><use href="#i-cap"/></svg>NUS CS (AI) · GPA 4.59 / 5.0</li>
+          <li><svg class="ic"><use href="#i-briefcase"/></svg>Developer Tech Intern · SP Group</li>
+          <li><svg class="ic"><use href="#i-pin"/></svg>Singapore · from Malaysia</li>
+          <li><svg class="ic"><use href="#i-sparkles"/></svg>Open to Summer 2027 internships</li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <!-- How I work -->
+  <section class="section container">
+    <div class="section-head reveal">
+      <p class="eyebrow">How I work</p>
+      <h2>Three habits I bring to every project</h2>
+    </div>
+    <div class="grid3" data-stagger>
+      <article class="card lift spot reveal">
+        <span class="card-icon"><svg class="ic"><use href="#i-bulb"/></svg></span>
+        <span class="step-num">01</span>
+        <h3>Understand the problem properly</h3>
+        <p>Off-the-shelf moderation fails on Singlish, and shoppers don't use catalog words. Finding the real constraint first decides which design will actually work.</p>
+      </article>
+      <article class="card lift spot reveal">
+        <span class="card-icon"><svg class="ic"><use href="#i-box"/></svg></span>
+        <span class="step-num">02</span>
+        <h3>Build the smallest thing that solves it</h3>
+        <p>Python standard library only, if that's enough. A thin API over a well-separated model. Less surface area means fewer ways to fail.</p>
+      </article>
+      <article class="card lift spot reveal">
+        <span class="card-icon"><svg class="ic"><use href="#i-target"/></svg></span>
+        <span class="step-num">03</span>
+        <h3>Measure whether it worked</h3>
+        <p>Recall and false-positive rate, Hit@10 and MRR, pilot results with real users. Where safety matters, I fail closed and tune toward coverage.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- Focus areas -->
+  <section class="section container">
+    <div class="section-head reveal">
+      <p class="eyebrow">Focus areas</p>
+      <h2>What I spend my time on</h2>
+    </div>
+    <div class="grid4" data-stagger>
+      <article class="card lift spot reveal"><span class="card-icon"><svg class="ic"><use href="#i-shield"/></svg></span><h3>LLM Systems</h3><p>Model harnesses, structured output, prompt and context budgeting, fail-closed design, threshold tuning.</p></article>
+      <article class="card lift spot reveal"><span class="card-icon"><svg class="ic"><use href="#i-search"/></svg></span><h3>Retrieval & RAG</h3><p>LangChain pipelines, embeddings, vector search (HNSW / IVF), grounding answers in real sources.</p></article>
+      <article class="card lift spot reveal"><span class="card-icon"><svg class="ic"><use href="#i-server"/></svg></span><h3>DevOps & Security</h3><p>GitHub Actions, self-hosted runners, Dependabot automation, on-premise inference, GHES.</p></article>
+      <article class="card lift spot reveal"><span class="card-icon"><svg class="ic"><use href="#i-layers"/></svg></span><h3>Full-Stack Product</h3><p>React / React Native / TypeScript frontends, Node and FastAPI backends, PostgreSQL, Supabase, Firebase.</p></article>
+    </div>
+  </section>
+
+  <!-- Right now -->
+  <section class="section container">
+    <div class="section-head reveal">
+      <p class="eyebrow">Right now</p>
+      <h2>Building, learning, curious about</h2>
+    </div>
+    <div class="grid3" data-stagger>
+      <article class="card list-card reveal">
+        <h3>Building</h3>
+        <ul>
+          <li>Taking the LLM PR security gate past proof-of-concept and widening its rollout</li>
+          <li>Evaluation harnesses that measure recall and false-positive rate, not just accuracy</li>
+          <li>Full-stack products where the AI is one component, not the whole pitch</li>
+        </ul>
+      </article>
+      <article class="card list-card reveal">
+        <h3>Learning</h3>
+        <ul>
+          <li>LLM evaluation: grounding, hallucination detection, verdict reliability</li>
+          <li>Agentic workflows: tool use, multi-step reasoning, keeping agents on track</li>
+          <li>Model serving under real latency budgets, and SRE practice: SLOs and observability</li>
+        </ul>
+      </article>
+      <article class="card list-card reveal">
+        <h3>Interested in</h3>
+        <ul>
+          <li>Security engineering where the detector is itself a model</li>
+          <li>Low-resource and code-mixed NLP (Singlish / Manglish)</li>
+          <li>Making AI systems auditable enough for regulated domains</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section container" id="contact">
+    <div class="cta reveal">
+      <h2>Let's build something together</h2>
+      <p>Open to Summer 2027 internships in software engineering, AI / ML, LLM and applied AI, or site reliability. I'm always happy to talk about AI engineering, side projects, or student life in Singapore.</p>
+      <div class="btns">
+        <a class="btn primary" href="mailto:ystey@u.nus.edu"><svg class="ic"><use href="#i-mail"/></svg> Email me</a>
+        <button class="btn" type="button" data-copy="ystey@u.nus.edu"><svg class="ic"><use href="#i-copy"/></svg> Copy email</button>
+        <a class="btn" href="https://www.linkedin.com/in/yee-siang-tey/" target="_blank" rel="noopener"><svg class="ic"><use href="#i-linkedin"/></svg> LinkedIn</a>
+        <a class="btn" href="https://github.com/YSTey0808" target="_blank" rel="noopener"><svg class="ic"><use href="#i-github"/></svg> GitHub</a>
+      </div>
+      <p style="margin:1.6rem auto 0;font-size:.95rem">ystey@u.nus.edu · +65 8800 2042 · Singapore</p>
+    </div>
+  </section>
 </main>
-<footer>© 2026 Tey Yee Siang · Always building, always learning.</footer>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div><a class="logo" href="index.html">YS<span>.</span>Tey</a><p class="muted">Always building, always learning.</p></div>
+    <nav class="footer-links" aria-label="Footer"><a href="projects.html">Projects</a><a href="resume.html">Resume</a><a href="about.html">About</a><a href="about.html#contact">Contact</a></nav>
+    <div class="socials">
+      <a href="https://github.com/YSTey0808" target="_blank" rel="noopener" aria-label="GitHub"><svg class="ic"><use href="#i-github"/></svg></a>
+      <a href="https://www.linkedin.com/in/yee-siang-tey/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg class="ic"><use href="#i-linkedin"/></svg></a>
+      <a href="mailto:ystey@u.nus.edu" aria-label="Email"><svg class="ic"><use href="#i-mail"/></svg></a>
+    </div>
+  </div>
+  <p class="copyright">© <span data-year>2026</span> Tey Yee Siang · Hand-built with HTML, CSS & vanilla JS.</p>
+</footer>
+<button class="to-top" type="button" aria-label="Back to top"><svg class="ic"><use href="#i-arrow-up"/></svg></button>
+<div class="toast" role="status" aria-live="polite"></div>
 <script src="script.js"></script>
 </body>
 </html>

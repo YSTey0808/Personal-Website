@@ -1,43 +1,289 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Yee Siang Tey — AI & Full-Stack Engineer</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tey Yee Siang — AI & Full-Stack Engineer</title>
+<meta name="description" content="Tey Yee Siang — Year 3 NUS Computer Science (AI) student building LLM security tooling, RAG pipelines and full-stack products. Open to Summer 2027 internships.">
+<meta name="author" content="Tey Yee Siang">
+<meta name="theme-color" content="#0e7490">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Tey Yee Siang — AI & Full-Stack Engineer">
+<meta property="og:description" content="NUS CS (AI) · GPA 4.59/5.0 · LLM security, RAG and full-stack products. Open to Summer 2027 internships.">
+<meta property="og:url" content="https://personalwebsite-eight-tawny-92.vercel.app/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230e7490'/%3E%3Ctext x='50%25' y='54%25' text-anchor='middle' dominant-baseline='middle' font-family='Arial,sans-serif' font-weight='800' font-size='28' fill='white'%3EYS%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<script>document.documentElement.classList.add('js');try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
 </head>
 <body>
-<header><nav class="nav">
-<a class="logo" href="index.html">YS<span>.</span>Tey</a>
-<button class="hamburger" aria-label="menu" onclick="document.querySelector('.links').classList.toggle('open')">☰</button>
-<div class="links"><a href="index.html" class="active">Home</a><a href="resume.html">Resume</a><a href="projects.html">Projects</a><a href="about.html">About Me</a></div>
-</nav></header>
-<main>
-<section class="hero">
-<div>
-<div class="badge fade-up">NUS Computer Science (AI) · GPA 4.59/5.0 · Open to Summer 2027 internships</div>
-<h1 class="fade-up d1">Hi, I'm Yee Siang.<br>I build <span class="typing" id="typing"></span></h1>
-<p class="sub fade-up d2">Year 3 CS undergrad at NUS specialising in AI. I work across LLM security, RAG pipelines, and full-stack products — from model harness to UI. Previously at Singapore Power (SP) Group and TechCircles.</p>
-<div class="btns fade-up d3">
-<a class="btn primary" href="projects.html">View Projects</a>
-<a class="btn ghost" href="resume.html">View Resume</a>
-<a class="btn ghost" href="https://github.com/YSTey0808" target="_blank" rel="noopener">GitHub ↗</a>
-</div>
-</div>
-<div class="card avatar-card fade-up d2">
-<div class="avatar">YS</div>
-<h3 style="margin:.2rem 0">Tey Yee Siang</h3>
-<p class="meta">Singapore · Malaysia<br>ystey@u.nus.edu</p>
-<p><span class="tag">Python</span><span class="tag">TypeScript</span><span class="tag">PyTorch</span><span class="tag">LangChain</span><span class="tag">React</span><span class="tag">Docker</span></p>
-<p style="margin-top:1rem"><a href="about.html">More about me →</a></p>
-</div>
-</section>
-<section class="grid3">
-<div class="card fade-up"><h3>🛡️ LLM Security</h3><p class="meta">PR security gate at SP Group — Ollama, GitHub Actions, 100% recall on malicious-intent cases.</p></div>
-<div class="card fade-up d1"><h3>🔎 Retrieval & RAG</h3><p class="meta">Geo-compliance RAG over 12 regulations — query decomposition, MMR + RRF.</p></div>
-<div class="card fade-up d2"><h3>🌐 Full-Stack</h3><p class="meta">React + Firebase trip planner (Orbital Honourable Mention), CakePHP + MySQL approvals.</p></div>
-</section>
+<a class="skip" href="#main">Skip to content</a>
+<div class="progress" aria-hidden="true"></div>
+
+<header class="site-header">
+  <nav class="nav" aria-label="Primary">
+    <a class="logo" href="index.html" aria-label="Tey Yee Siang — home">YS<span>.</span>Tey</a>
+    <div class="links" id="nav-links">
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="resume.html">Resume</a>
+      <a href="about.html">About</a>
+    </div>
+    <div class="nav-actions">
+      <button class="icon-btn theme-toggle" type="button" aria-label="Toggle dark mode"><svg class="ic moon"><use href="#i-moon"/></svg><svg class="ic sun"><use href="#i-sun"/></svg></button>
+      <a class="btn btn-sm primary nav-cta" href="mailto:ystey@u.nus.edu">Let's talk</a>
+      <button class="icon-btn hamburger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+</header>
+
+<main id="main">
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="hero-bg" aria-hidden="true"><span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span><div class="grid-bg"></div></div>
+    <div class="container hero-inner">
+      <div class="hero-copy">
+        <p class="status reveal"><span class="pulse" aria-hidden="true"></span>Open to Summer 2027 internships</p>
+        <h1 class="reveal" style="--i:1">Hi, I'm <span class="grad">Yee Siang</span> <span class="wave" aria-hidden="true">👋</span></h1>
+        <p class="hero-role reveal" style="--i:2">I build <span class="typing" id="typing" data-phrases='["reliable LLM systems.","RAG & search pipelines.","full-stack products.","secure AI tooling."]'>reliable LLM systems.</span></p>
+        <p class="lead reveal" style="--i:3">Year 3 Computer Science student at <strong>NUS</strong>, specialising in AI. I work across LLM security, retrieval and full-stack products — from the model harness to the UI — and I measure whether things actually work. Currently a <strong>Developer Tech Intern at SP Group</strong>.</p>
+        <div class="btns reveal" style="--i:4">
+          <a class="btn primary" href="projects.html">See my projects <svg class="ic ic-move"><use href="#i-arrow-right"/></svg></a>
+          <a class="btn" href="resume.html">View resume</a>
+        </div>
+        <ul class="hero-facts reveal" style="--i:5">
+          <li><svg class="ic"><use href="#i-cap"/></svg>NUS B.Comp. CS (AI) · GPA 4.59/5.0</li>
+          <li><svg class="ic"><use href="#i-pin"/></svg>Singapore</li>
+          <li><svg class="ic"><use href="#i-trophy"/></svg>4 hackathons · Orbital Honourable Mention</li>
+        </ul>
+      </div>
+
+      <aside class="card profile-card reveal tilt" style="--i:2" aria-label="Profile summary">
+        <!-- To use a photo: replace "YS" below with <img src="images/profile.jpg" alt="Tey Yee Siang"> -->
+        <div class="avatar-wrap"><div class="avatar">YS</div></div>
+        <h2 class="profile-name">Tey Yee Siang</h2>
+        <p class="profile-role">AI & Full-Stack Engineer</p>
+        <div class="now"><span class="pulse" aria-hidden="true"></span><div><small>Currently</small><strong>Developer Tech Intern · Singapore Power (SP) Group</strong></div></div>
+        <div class="tags">
+          <span class="tag">Python</span><span class="tag">TypeScript</span><span class="tag">PyTorch</span><span class="tag">LangChain</span><span class="tag">React</span><span class="tag">Docker</span>
+        </div>
+        <div class="socials">
+          <a href="https://github.com/YSTey0808" target="_blank" rel="noopener" aria-label="GitHub"><svg class="ic"><use href="#i-github"/></svg></a>
+          <a href="https://www.linkedin.com/in/yee-siang-tey/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg class="ic"><use href="#i-linkedin"/></svg></a>
+          <a href="mailto:ystey@u.nus.edu" aria-label="Email"><svg class="ic"><use href="#i-mail"/></svg></a>
+        </div>
+      </aside>
+    </div>
+    <a class="scroll-hint" href="#stats" aria-label="Scroll to content"><span></span></a>
+  </section>
+
+  <!-- ============ STATS ============ -->
+  <section class="container" id="stats" aria-label="At a glance">
+    <div class="stats reveal" data-stagger>
+      <div class="stat"><span class="stat-num"><span class="count" data-to="4.59" data-decimals="2">4.59</span><small> / 5.0</small></span><span class="stat-label">GPA at NUS</span></div>
+      <div class="stat"><span class="stat-num"><span class="count" data-to="2">2</span></span><span class="stat-label">Software internships</span></div>
+      <div class="stat"><span class="stat-num"><span class="count" data-to="4">4</span></span><span class="stat-label">Hackathons competed</span></div>
+      <div class="stat"><span class="stat-num"><span class="count" data-to="400">400</span>+</span><span class="stat-label">Students led as President</span></div>
+    </div>
+  </section>
+
+  <!-- ============ WHAT I DO ============ -->
+  <section class="section container">
+    <div class="section-head reveal">
+      <p class="eyebrow">What I do</p>
+      <h2>AI that's reliable enough to ship</h2>
+      <p class="section-sub">I care less about the demo and more about what happens when real users, messy data and adversarial inputs show up.</p>
+    </div>
+    <div class="grid3" data-stagger>
+      <article class="card lift spot reveal">
+        <span class="card-icon"><svg class="ic"><use href="#i-shield"/></svg></span>
+        <h3>LLM Systems & Security</h3>
+        <p>Model harnesses with schema-constrained outputs, context budgeting and fail-closed design — like the on-prem PR security gate I built at SP Group.</p>
+      </article>
+      <article class="card lift spot reveal">
+        <span class="card-icon"><svg class="ic"><use href="#i-search"/></svg></span>
+        <h3>Retrieval & RAG</h3>
+        <p>Hybrid search, query decomposition, RRF fusion and reranking — grounded answers evaluated on recall, Hit@10 and MRR, not vibes.</p>
+      </article>
+      <article class="card lift spot reveal">
+        <span class="card-icon"><svg class="ic"><use href="#i-layers"/></svg></span>
+        <h3>Full-Stack Product</h3>
+        <p>React / TypeScript frontends, FastAPI and Node backends, Supabase and Firebase — built, deployed and put in front of real users.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============ EXPERIENCE ============ -->
+  <section class="section container">
+    <div class="section-head row reveal">
+      <div>
+        <p class="eyebrow">Experience</p>
+        <h2>Where I've worked</h2>
+      </div>
+      <a class="link-arrow" href="resume.html">Full resume <svg class="ic"><use href="#i-arrow-right"/></svg></a>
+    </div>
+    <div class="xp-list" data-stagger>
+      <article class="card xp lift spot reveal">
+        <span class="xp-logo lg-sp" aria-hidden="true">SP</span>
+        <div class="xp-main">
+          <h3>Developer Tech Intern <span>· Singapore Power (SP) Group</span></h3>
+          <p>Built an LLM-powered PR security gate as a GitHub Action running an on-prem Ollama model — fail-closed, with an eval suite tuned to <strong>100% recall</strong> on malicious-intent cases. Automated Dependabot patching on GitHub Enterprise Server.</p>
+          <div class="tags"><span class="tag">LLM Security</span><span class="tag">Ollama</span><span class="tag">GitHub Actions</span><span class="tag">Docker</span></div>
+        </div>
+        <span class="xp-date">Jun – Dec 2026</span>
+      </article>
+      <article class="card xp lift spot reveal">
+        <span class="xp-logo lg-tc" aria-hidden="true">TC</span>
+        <div class="xp-main">
+          <h3>Software Developer Intern <span>· TechCircles</span></h3>
+          <p>Built a full-stack workflow-approval system that replaced a paper process and cut approval turnaround by <strong>50%</strong>. Integrated AirAsia REST APIs with Postman test suites across 3 projects.</p>
+          <div class="tags"><span class="tag">CakePHP</span><span class="tag">MySQL</span><span class="tag">REST APIs</span><span class="tag">Postman</span></div>
+        </div>
+        <span class="xp-date">Jan – May 2024</span>
+      </article>
+      <article class="card xp lift spot reveal">
+        <span class="xp-logo lg-ms" aria-hidden="true">MSL</span>
+        <div class="xp-main">
+          <h3>President <span>· NUS Malaysian Students' League</span></h3>
+          <p>Led a <strong>40+ member exco</strong> serving 400+ students, and secured <strong>SGD 5,000</strong> in sponsorship with partners including the Malaysian High Commission.</p>
+          <div class="tags"><span class="tag">Leadership</span><span class="tag">Partnerships</span></div>
+        </div>
+        <span class="xp-date">Aug 2025 – Jul 2026</span>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============ FEATURED PROJECTS ============ -->
+  <section class="section container">
+    <div class="section-head row reveal">
+      <div>
+        <p class="eyebrow">Featured work</p>
+        <h2>Selected projects</h2>
+        <p class="section-sub">Hackathon builds and internship work, each measured against a real metric.</p>
+      </div>
+      <a class="link-arrow" href="projects.html">All 9 projects <svg class="ic"><use href="#i-arrow-right"/></svg></a>
+    </div>
+    <div class="projects three" data-stagger>
+      <article class="card project lift reveal">
+        <div class="project-visual g1">
+          <svg class="ic" aria-hidden="true"><use href="#i-alert"/></svg>
+          <span class="project-badge">Huawei Tech4City 2026</span>
+          <span class="project-headline">96.15%<small>accuracy</small></span>
+        </div>
+        <div class="project-body">
+          <h3>Real-Time Harm Detection Platform</h3>
+          <p>Flags grooming, scams and bullying in code-mixed Singlish / Manglish chat using a GNN + XLM-RoBERTa + LLM pipeline. 100% harmful-actor detection in a 20-user pilot.</p>
+          <div class="tags"><span class="tag">GNN</span><span class="tag">React + TS</span><span class="tag">FastAPI</span><span class="tag">Supabase</span></div>
+          <div class="project-links">
+            <a href="https://huaweitech4city.vercel.app" target="_blank" rel="noopener">Live demo <svg class="ic ic-diag"><use href="#i-arrow-up-right"/></svg></a>
+            <a href="https://github.com/YSTey0808/huaweitech4city" target="_blank" rel="noopener"><svg class="ic"><use href="#i-github"/></svg> Code</a>
+          </div>
+        </div>
+      </article>
+      <article class="card project lift reveal">
+        <div class="project-visual g2">
+          <svg class="ic" aria-hidden="true"><use href="#i-bag"/></svg>
+          <span class="project-badge">TikTok TechJam 2026</span>
+          <span class="project-headline">98.5%<small>Hit@10</small></span>
+        </div>
+        <div class="project-body">
+          <h3>Conversational Shopping Search Agent</h3>
+          <p>Finds the right product among 50,000 listings in 2.6 turns on average — hybrid retrieval fused with RRF, and follow-up questions chosen by information gain.</p>
+          <div class="tags"><span class="tag">Python</span><span class="tag">LangChain</span><span class="tag">RRF</span><span class="tag">Reranking</span></div>
+          <div class="project-links">
+            <a href="https://github.com/YSTey0808/techjam-conversational-search" target="_blank" rel="noopener"><svg class="ic"><use href="#i-github"/></svg> Code</a>
+          </div>
+        </div>
+      </article>
+      <article class="card project lift reveal">
+        <div class="project-visual g3">
+          <svg class="ic" aria-hidden="true"><use href="#i-shield"/></svg>
+          <span class="project-badge">Open source · 2026</span>
+          <span class="project-headline">0<small>third-party deps</small></span>
+        </div>
+        <div class="project-body">
+          <h3>Code Intent Analyser</h3>
+          <p>GitHub Action that scans pull-request diffs for deliberate harm — backdoors, exfiltration, CI tampering — with a local LLM. Every failure path escalates, never passes.</p>
+          <div class="tags"><span class="tag">Python</span><span class="tag">Ollama</span><span class="tag">GitHub Actions</span><span class="tag">LLM Eval</span></div>
+          <div class="project-links">
+            <a href="https://github.com/YSTey0808/llm-PR-reviewer" target="_blank" rel="noopener"><svg class="ic"><use href="#i-github"/></svg> Code</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============ TECH STACK ============ -->
+  <section class="section" aria-label="Tech stack">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">Toolbox</p>
+        <h2>Tech I work with</h2>
+      </div>
+    </div>
+    <div class="marquee reveal">
+      <div class="marquee-track">
+        <span class="chip"><i style="--c:#3776ab"></i>Python</span>
+        <span class="chip"><i style="--c:#3178c6"></i>TypeScript</span>
+        <span class="chip"><i style="--c:#f89820"></i>Java</span>
+        <span class="chip"><i style="--c:#f7df1e"></i>JavaScript</span>
+        <span class="chip"><i style="--c:#00599c"></i>C++</span>
+        <span class="chip"><i style="--c:#00add8"></i>Go</span>
+        <span class="chip"><i style="--c:#336791"></i>SQL</span>
+        <span class="chip"><i style="--c:#ee4c2c"></i>PyTorch</span>
+        <span class="chip"><i style="--c:#1c3c3c"></i>LangChain</span>
+        <span class="chip"><i style="--c:#0e7490"></i>Ollama</span>
+        <span class="chip"><i style="--c:#7c3aed"></i>RAG</span>
+        <span class="chip"><i style="--c:#c026d3"></i>GNNs</span>
+      </div>
+    </div>
+    <div class="marquee reverse reveal">
+      <div class="marquee-track">
+        <span class="chip"><i style="--c:#61dafb"></i>React</span>
+        <span class="chip"><i style="--c:#61dafb"></i>React Native</span>
+        <span class="chip"><i style="--c:#339933"></i>Node.js</span>
+        <span class="chip"><i style="--c:#009688"></i>FastAPI</span>
+        <span class="chip"><i style="--c:#3ecf8e"></i>Supabase</span>
+        <span class="chip"><i style="--c:#ffca28"></i>Firebase</span>
+        <span class="chip"><i style="--c:#4169e1"></i>PostgreSQL</span>
+        <span class="chip"><i style="--c:#2496ed"></i>Docker</span>
+        <span class="chip"><i style="--c:#326ce5"></i>Kubernetes</span>
+        <span class="chip"><i style="--c:#4285f4"></i>GCP</span>
+        <span class="chip"><i style="--c:#0078d4"></i>Azure</span>
+        <span class="chip"><i style="--c:#2088ff"></i>GitHub Actions</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA ============ -->
+  <section class="section container">
+    <div class="cta reveal">
+      <h2>Hiring for Summer 2027?</h2>
+      <p>I'm looking for internships in software engineering, AI / ML, applied LLM engineering, or SRE. I'd love to hear what your team is building.</p>
+      <div class="btns">
+        <a class="btn primary" href="mailto:ystey@u.nus.edu"><svg class="ic"><use href="#i-mail"/></svg> ystey@u.nus.edu</a>
+        <a class="btn" href="https://www.linkedin.com/in/yee-siang-tey/" target="_blank" rel="noopener"><svg class="ic"><use href="#i-linkedin"/></svg> Connect on LinkedIn</a>
+      </div>
+    </div>
+  </section>
 </main>
-<footer>© 2026 Tey Yee Siang · Built with plain HTML/CSS/JS · <a href="about.html">Contact</a></footer>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div><a class="logo" href="index.html">YS<span>.</span>Tey</a><p class="muted">Always building, always learning.</p></div>
+    <nav class="footer-links" aria-label="Footer"><a href="projects.html">Projects</a><a href="resume.html">Resume</a><a href="about.html">About</a><a href="about.html#contact">Contact</a></nav>
+    <div class="socials">
+      <a href="https://github.com/YSTey0808" target="_blank" rel="noopener" aria-label="GitHub"><svg class="ic"><use href="#i-github"/></svg></a>
+      <a href="https://www.linkedin.com/in/yee-siang-tey/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg class="ic"><use href="#i-linkedin"/></svg></a>
+      <a href="mailto:ystey@u.nus.edu" aria-label="Email"><svg class="ic"><use href="#i-mail"/></svg></a>
+    </div>
+  </div>
+  <p class="copyright">© <span data-year>2026</span> Tey Yee Siang · Hand-built with HTML, CSS & vanilla JS.</p>
+</footer>
+<button class="to-top" type="button" aria-label="Back to top"><svg class="ic"><use href="#i-arrow-up"/></svg></button>
+<div class="toast" role="status" aria-live="polite"></div>
 <script src="script.js"></script>
 </body>
 </html>

@@ -1,42 +1,154 @@
 <!doctype html>
 <html lang="en">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Resume — Yee Siang Tey</title><link rel="stylesheet" href="style.css"></head>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Resume — Tey Yee Siang</title>
+<meta name="description" content="Resume of Tey Yee Siang — NUS Computer Science (AI), GPA 4.59/5.0. Developer Tech Intern at SP Group; previously Software Developer Intern at TechCircles.">
+<meta name="author" content="Tey Yee Siang">
+<meta name="theme-color" content="#0e7490">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Resume — Tey Yee Siang">
+<meta property="og:description" content="NUS CS (AI) · GPA 4.59/5.0 · SP Group, TechCircles · LLM security, RAG, full-stack.">
+<meta property="og:url" content="https://personalwebsite-eight-tawny-92.vercel.app/resume.html">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230e7490'/%3E%3Ctext x='50%25' y='54%25' text-anchor='middle' dominant-baseline='middle' font-family='Arial,sans-serif' font-weight='800' font-size='28' fill='white'%3EYS%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script>document.documentElement.classList.add('js');try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+</head>
 <body>
-<header><nav class="nav">
-<a class="logo" href="index.html">YS<span>.</span>Tey</a>
-<button class="hamburger" aria-label="menu" onclick="document.querySelector('.links').classList.toggle('open')">☰</button>
-<div class="links"><a href="index.html">Home</a><a href="resume.html" class="active">Resume</a><a href="projects.html">Projects</a><a href="about.html">About Me</a></div>
-</nav></header>
-<main>
-<h1 class="fade-up">Resume</h1>
-<p class="sub fade-up d1">NUS B.Comp. Computer Science (AI), 2024–2028 · GPA 4.59/5.0 · <a href="mailto:ystey@u.nus.edu">ystey@u.nus.edu</a> · <a href="https://www.linkedin.com/in/yee-siang-tey/" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://github.com/YSTey0808" target="_blank" rel="noopener">GitHub</a></p>
+<a class="skip" href="#main">Skip to content</a>
+<div class="progress" aria-hidden="true"></div>
 
-<div class="grid2">
-<div class="card fade-up"><h2>Education</h2>
-<p><strong>National University of Singapore</strong><br><span class="meta">Aug 2024 – May 2028 · B.Comp. CS, AI specialisation</span></p>
-<p class="meta">GPA 4.59/5.0 (Highest Distinction). Coursework: AI & ML, Probability & Stats, DSA, SWE, Networks, Databases, OS.</p></div>
-<div class="card fade-up d1"><h2>Technical Skills</h2>
-<p><strong>Languages:</strong> Python, Java, TypeScript, JavaScript, C++, Go, SQL, Bash</p>
-<p><strong>ML:</strong> PyTorch, XLM-RoBERTa, GNNs (GraphSAGE, GATv2), NumPy, Pandas</p>
-<p><strong>LLM/Agents:</strong> LangChain, OpenAI/Anthropic APIs, Ollama, RAG, reranking, MCP, structured outputs</p>
-<p><strong>Web/Infra:</strong> React, Node, Express, CakePHP, Docker, K8s (AKS), GCP, GitHub Actions</p></div>
-</div>
+<header class="site-header">
+  <nav class="nav" aria-label="Primary">
+    <a class="logo" href="index.html" aria-label="Tey Yee Siang — home">YS<span>.</span>Tey</a>
+    <div class="links" id="nav-links">
+      <a href="index.html">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="resume.html" aria-current="page">Resume</a>
+      <a href="about.html">About</a>
+    </div>
+    <div class="nav-actions">
+      <button class="icon-btn theme-toggle" type="button" aria-label="Toggle dark mode"><svg class="ic moon"><use href="#i-moon"/></svg><svg class="ic sun"><use href="#i-sun"/></svg></button>
+      <a class="btn btn-sm primary nav-cta" href="mailto:ystey@u.nus.edu">Let's talk</a>
+      <button class="icon-btn hamburger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+</header>
 
-<h2 style="margin-top:2rem">Experience</h2>
-<div class="card"><div class="timeline">
-<div class="job"><h3>Developer Tech Intern — Singapore Power (SP) Group</h3>
-<div class="meta">Jun 2026 – Dec 2026 · Singapore</div>
-<ul><li>Built LLM-powered PR security gate as GitHub Action, Ollama on-prem inference.</li><li>Structured JSON verdicts, fail-closed handling, tiered file prioritisation for context window.</li><li>Eval suite: mock server + 50 labelled PRs, tuned to 100% recall on malicious intent.</li></ul></div>
-<div class="job"><h3>Software Developer Intern — TechCircles</h3>
-<div class="meta">Jan 2024 – May 2024 · Johor Bahru</div>
-<ul><li>Full-stack workflow-approval system (CakePHP/MySQL), cut turnaround 50%.</li><li>Integrated AirAsia REST APIs, Postman test suites across 3 projects.</li></ul></div>
-<div class="job"><h3>President — NUS Malaysian Students' League</h3>
-<div class="meta">Aug 2025 – Jul 2026</div>
-<ul><li>Led 40+ exco serving 400+ students, SGD 5,000 sponsorship incl. Malaysian High Commission.</li></ul></div>
-</div></div>
+<main id="main">
+  <section class="page-hero">
+    <div class="hero-bg" aria-hidden="true"><span class="blob b1"></span><div class="grid-bg"></div></div>
+    <div class="container">
+      <p class="eyebrow reveal">Resume</p>
+      <h1 class="reveal" style="--i:1">Tey Yee Siang</h1>
+      <p class="section-sub reveal" style="--i:2">B.Comp. Computer Science (AI) at NUS, 2024 – 2028 · GPA 4.59 / 5.0 · Singapore<br>
+        <a href="mailto:ystey@u.nus.edu">ystey@u.nus.edu</a> · <a href="https://www.linkedin.com/in/yee-siang-tey/" target="_blank" rel="noopener">linkedin.com/in/yee-siang-tey</a> · <a href="https://github.com/YSTey0808" target="_blank" rel="noopener">github.com/YSTey0808</a></p>
+      <div class="btns reveal" style="--i:3">
+        <button class="btn primary" type="button" data-print><svg class="ic"><use href="#i-printer"/></svg> Print / Save as PDF</button>
+        <a class="btn" href="mailto:ystey@u.nus.edu"><svg class="ic"><use href="#i-mail"/></svg> Email me</a>
+        <a class="btn" href="https://www.linkedin.com/in/yee-siang-tey/" target="_blank" rel="noopener"><svg class="ic"><use href="#i-linkedin"/></svg> LinkedIn</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="container resume-grid">
+    <div>
+      <!-- Experience -->
+      <article class="card reveal">
+        <h2 class="card-title"><svg class="ic"><use href="#i-briefcase"/></svg> Experience</h2>
+        <ol class="timeline">
+          <li>
+            <div class="tl-head"><h3>Developer Tech Intern</h3><span class="tl-meta">Jun 2026 – Dec 2026</span></div>
+            <p class="tl-org">Singapore Power (SP) Group · Singapore</p>
+            <ul>
+              <li>Built an <strong>LLM-powered PR security gate</strong> as a GitHub Action that runs a locally hosted open-source model (Ollama) to flag malicious code intent before merge — all inference stays on-premise.</li>
+              <li>Engineered the model harness end to end: structured JSON verdicts, fail-closed handling deliberately biased toward false positives, and tiered file prioritisation so large diffs fit the context window.</li>
+              <li>Built an evaluation suite — mock inference server plus 50 labelled PRs — and tuned the decision threshold on recall vs. false-positive rate, reaching <strong>100% recall</strong> on malicious-intent cases.</li>
+              <li>Configured automated <strong>Dependabot</strong> patching on GitHub Enterprise Server with rootless Docker self-hosted runners, gated on test-coverage checks before updates roll out.</li>
+            </ul>
+            <div class="tags"><span class="tag">LLM Security</span><span class="tag">Ollama</span><span class="tag">GitHub Actions</span><span class="tag">GHES</span><span class="tag">Docker</span></div>
+          </li>
+          <li>
+            <div class="tl-head"><h3>Software Developer Intern</h3><span class="tl-meta">Jan 2024 – May 2024</span></div>
+            <p class="tl-org">TechCircles · Johor Bahru, Malaysia</p>
+            <ul>
+              <li>Built a full-stack <strong>workflow-approval system</strong> (CakePHP, MySQL) that digitised a paper-based internal process, cutting approval turnaround by <strong>50%</strong>.</li>
+              <li>Integrated <strong>AirAsia</strong> REST APIs and wrote Postman integration and API tests across 3 projects to catch defects before release.</li>
+            </ul>
+            <div class="tags"><span class="tag">CakePHP</span><span class="tag">MySQL</span><span class="tag">REST APIs</span><span class="tag">Postman</span></div>
+          </li>
+        </ol>
+      </article>
+
+      <!-- Projects -->
+      <article class="card reveal">
+        <h2 class="card-title"><svg class="ic"><use href="#i-code"/></svg> Selected projects</h2>
+        <ul class="mini-projects">
+          <li><div><b>Real-Time Harm Detection Platform</b><span>GNN + XLM-RoBERTa + LLM for Singlish / Manglish harm. Owned web + hosting stack. 96.15% accuracy.</span></div><em>Tech4City 2026</em></li>
+          <li><div><b>Conversational Shopping Search Agent</b><span>Hybrid retrieval + RRF over 50k products. 98.5% Hit@10, 0.64 MRR, 2.6 turns.</span></div><em>TechJam 2026</em></li>
+          <li><div><b>Code Intent Analyser</b><span>Open-source, fail-safe LLM PR security gate on local Ollama. Zero dependencies.</span></div><em>Open source</em></li>
+          <li><div><b>Geo-Compliance RAG Assistant</b><span>RAG over 12 regulations with RAG-Fusion, MMR and cited evidence. ~50% less manual review.</span></div><em>TechJam 2025</em></li>
+          <li><div><b>Care4You</b><span>React Native app for accessible community sign-ups, with LLM translation.</span></div><em>Hack4Good 2026</em></li>
+          <li><div><b>RoamWise</b><span>Collaborative AI trip planner (React, Firebase). Honourable Mention, top public vote.</span></div><em>NUS Orbital</em></li>
+        </ul>
+        <p style="margin:1rem 0 0" class="no-print"><a class="link-arrow" href="projects.html">Details, metrics and code <svg class="ic"><use href="#i-arrow-right"/></svg></a></p>
+      </article>
+    </div>
+
+    <div>
+      <!-- Education -->
+      <article class="card edu reveal" style="--i:1">
+        <h2 class="card-title"><svg class="ic"><use href="#i-cap"/></svg> Education</h2>
+        <h3>National University of Singapore</h3>
+        <p class="tl-org">B.Comp. Computer Science · AI specialisation</p>
+        <p class="tl-meta" style="margin-bottom:.8rem">Aug 2024 – May 2028</p>
+        <ul class="metrics"><li><strong>4.59 / 5.0</strong> GPA</li><li><strong>Highest</strong> Distinction</li></ul>
+        <p style="font-size:.92rem">Coursework: AI & Machine Learning, Data Structures & Algorithms, Software Engineering, Probability & Statistics, Databases, Computer Networks, Operating Systems.</p>
+      </article>
+
+      <!-- Skills -->
+      <article class="card reveal" style="--i:2">
+        <h2 class="card-title"><svg class="ic"><use href="#i-sparkles"/></svg> Skills</h2>
+        <div class="kv">
+          <div><h4>Languages</h4><div class="tags"><span class="tag">Python</span><span class="tag">Java</span><span class="tag">TypeScript</span><span class="tag">JavaScript</span><span class="tag">C++</span><span class="tag">Go</span><span class="tag">SQL</span><span class="tag">Bash</span></div></div>
+          <div><h4>AI / ML</h4><div class="tags"><span class="tag">PyTorch</span><span class="tag">GNNs (GraphSAGE, GATv2)</span><span class="tag">XLM-RoBERTa</span><span class="tag">CNNs</span><span class="tag">NumPy</span><span class="tag">Pandas</span></div></div>
+          <div><h4>LLM & Agents</h4><div class="tags"><span class="tag">LangChain</span><span class="tag">OpenAI / Anthropic APIs</span><span class="tag">Ollama</span><span class="tag">RAG</span><span class="tag">Reranking</span><span class="tag">MCP</span><span class="tag">Structured outputs</span><span class="tag">Vector search</span></div></div>
+          <div><h4>Web</h4><div class="tags"><span class="tag">React</span><span class="tag">React Native</span><span class="tag">Node.js</span><span class="tag">Express</span><span class="tag">FastAPI</span><span class="tag">CakePHP</span></div></div>
+          <div><h4>Cloud, DevOps & Data</h4><div class="tags"><span class="tag">Docker</span><span class="tag">Kubernetes (AKS)</span><span class="tag">GCP</span><span class="tag">Azure</span><span class="tag">GitHub Actions</span><span class="tag">PostgreSQL</span><span class="tag">MySQL</span><span class="tag">Supabase</span><span class="tag">Firebase</span></div></div>
+        </div>
+      </article>
+
+      <!-- Leadership -->
+      <article class="card reveal" style="--i:3">
+        <h2 class="card-title"><svg class="ic"><use href="#i-trophy"/></svg> Leadership & awards</h2>
+        <ul class="awards">
+          <li><svg class="ic"><use href="#i-users"/></svg><div><b>President, NUS Malaysian Students' League</b><span>Aug 2025 – Jul 2026 · Led a 40+ member exco serving 400+ students; secured SGD 5,000 sponsorship with 10+ partners incl. the Malaysian High Commission.</span></div></li>
+          <li><svg class="ic"><use href="#i-trophy"/></svg><div><b>Honourable Mention, NUS Orbital</b><span>Artemis level · highest public vote count in the cohort.</span></div></li>
+          <li><svg class="ic"><use href="#i-code"/></svg><div><b>Hackathons</b><span>Huawei Tech4City 2026 · TikTok TechJam 2025 & 2026 · Hack4Good 2026.</span></div></li>
+        </ul>
+      </article>
+    </div>
+  </section>
 </main>
-<footer>© 2026 Tey Yee Siang · <a href="about.html">Contact</a></footer>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div><a class="logo" href="index.html">YS<span>.</span>Tey</a><p class="muted">Always building, always learning.</p></div>
+    <nav class="footer-links" aria-label="Footer"><a href="projects.html">Projects</a><a href="resume.html">Resume</a><a href="about.html">About</a><a href="about.html#contact">Contact</a></nav>
+    <div class="socials">
+      <a href="https://github.com/YSTey0808" target="_blank" rel="noopener" aria-label="GitHub"><svg class="ic"><use href="#i-github"/></svg></a>
+      <a href="https://www.linkedin.com/in/yee-siang-tey/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg class="ic"><use href="#i-linkedin"/></svg></a>
+      <a href="mailto:ystey@u.nus.edu" aria-label="Email"><svg class="ic"><use href="#i-mail"/></svg></a>
+    </div>
+  </div>
+  <p class="copyright">© <span data-year>2026</span> Tey Yee Siang · Hand-built with HTML, CSS & vanilla JS.</p>
+</footer>
+<button class="to-top" type="button" aria-label="Back to top"><svg class="ic"><use href="#i-arrow-up"/></svg></button>
+<div class="toast" role="status" aria-live="polite"></div>
 <script src="script.js"></script>
 </body>
 </html>

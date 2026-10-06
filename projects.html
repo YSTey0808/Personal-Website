@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Projects — Yee Siang Tey</title><link rel="stylesheet" href="style.css"></head>
+<body>
+<header><nav class="nav">
+<a class="logo" href="index.html">YS<span>.</span>Tey</a>
+<button class="hamburger" aria-label="menu" onclick="document.querySelector('.links').classList.toggle('open')">☰</button>
+<div class="links"><a href="index.html">Home</a><a href="resume.html">Resume</a><a href="projects.html" class="active">Projects</a><a href="about.html">About Me</a></div>
+</nav></header>
+<main>
+<h1 class="fade-up">Projects</h1>
+<p class="sub fade-up d1">Swipe / use arrows. Each slide is a real project from resume + GitHub.</p>
+
+<div class="carousel fade-up d2" id="carousel">
+<div class="slides" id="slides">
+<div class="slide"><div class="slide-visual s1">🛒<br>Shopping Search Agent<br><small>TikTok TechJam 2026</small></div>
+<div class="slide-body"><h3>Conversational Shopping Search & Recommendation Agent</h3>
+<p class="meta">Retrieve-rank-rerank over 50k products (RRF + listwise LLM rerank). Led dynamic-context module. 98.5% Hit@10, 0.64 MRR, 2.6 turns/session.</p>
+<p><span class="tag">LangChain</span><span class="tag">LLM Rerank</span><span class="tag">RRF</span></p></div></div>
+<div class="slide"><div class="slide-visual s2">🛡️<br>Harm Detection Platform<br><small>Huawei Tech4City 2026</small></div>
+<div class="slide-body"><h3>Real-Time Harm Detection Platform</h3>
+<p class="meta">GNN + XLM-RoBERTa + Claude Haiku for Singlish/Manglish grooming/scam/bullying. Owned backend + React/TS + GCP. 96.15% acc, 100% harmful-actor detection in 20-user pilot.</p>
+<p><span class="tag">GNN</span><span class="tag">React TS</span><span class="tag">GCP</span></p></div></div>
+<div class="slide"><div class="slide-visual s3">⚖️<br>Geo-Compliance RAG<br><small>TikTok TechJam 2025</small></div>
+<div class="slide-body"><h3>Geo-Compliance RAG System</h3>
+<p class="meta">Classifies features vs 12 EU/US/SG/JP regulations. Query decomposition, MMR + RRF, Chroma. Cut manual review ~50%.</p>
+<p><span class="tag">RAG</span><span class="tag">Chroma</span><span class="tag">OpenAI</span></p></div></div>
+<div class="slide"><div class="slide-visual s4">✈️<br>RoamWise Trip Planner<br><small>NUS Orbital · Honourable Mention</small></div>
+<div class="slide-body"><h3>Collaborative Trip Planner (RoamWise)</h3>
+<p class="meta">Real-time collaborative planner with AI itinerary + budget + live sync. <a href="https://github.com/YSTey0808/roamwise-orbital-liftoff" target="_blank" rel="noopener">Repo ↗</a></p>
+<p><span class="tag">React</span><span class="tag">Firebase</span><span class="tag">AI</span></p></div></div>
+</div>
+<button class="ctrl prev" onclick="move(-1)" aria-label="prev">‹</button>
+<button class="ctrl next" onclick="move(1)" aria-label="next">›</button>
+<div class="dots" id="dots"></div>
+</div>
+
+<div class="proj-grid">
+<div class="card"><h3>More on GitHub</h3><p class="meta">roamwise-orbital-liftoff, hypedance, ip, tp — TypeScript, Python, Java.</p><p><a href="https://github.com/YSTey0808?tab=repositories" target="_blank" rel="noopener">All repos ↗</a></p></div>
+<div class="card"><h3>Evaluation mindset</h3><p class="meta">I measure recall/FPR, Hit@10/MRR — not just accuracy. Fail-closed where safety matters.</p></div>
+</div>
+</main>
+<footer>© 2026 Tey Yee Siang · <a href="about.html">Contact</a></footer>
+<script src="script.js"></script>
+</body>
+</html>

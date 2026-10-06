@@ -1,0 +1,70 @@
+/* Light minimal portfolio - Yee Siang */
+:root{
+  --bg:#fafaf9; --card:#ffffff; --text:#1c1917; --muted:#78716c;
+  --accent:#0e7490; --accent-light:#ecfeff; --border:#e7e5e4;
+  --radius:14px; --max:960px;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+header{position:sticky;top:0;background:rgba(250,250,249,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--border);z-index:10}
+.nav{max-width:var(--max);margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:.9rem 1.2rem}
+.logo{font-weight:800;letter-spacing:-.02em;color:var(--text);font-size:1.1rem}
+.logo span{color:var(--accent)}
+.links{display:flex;gap:1.1rem}
+.links a{color:var(--text);font-weight:500;padding:.35rem .6rem;border-radius:8px}
+.links a.active,.links a:hover{background:var(--accent-light);color:var(--accent);text-decoration:none}
+.hamburger{display:none;background:none;border:1px solid var(--border);border-radius:8px;padding:.4rem .6rem;font-size:1.2rem;cursor:pointer}
+main{max-width:var(--max);margin:0 auto;padding:2.5rem 1.2rem 4rem;min-height:70vh}
+.hero{display:grid;grid-template-columns:1.2fr .8fr;gap:2rem;align-items:center;padding:2rem 0}
+.badge{display:inline-block;background:var(--accent-light);color:var(--accent);padding:.3rem .8rem;border-radius:999px;font-size:.85rem;font-weight:600;margin-bottom:1rem}
+h1{font-size:2.6rem;line-height:1.1;margin:.2rem 0 1rem;letter-spacing:-.03em}
+.typing{color:var(--accent);font-weight:700;border-right:3px solid var(--accent);padding-right:4px;animation:blink 1s step-end infinite}
+@keyframes blink{50%{border-color:transparent}}
+.sub{color:var(--muted);font-size:1.1rem}
+.btns{display:flex;gap:.8rem;margin-top:1.5rem;flex-wrap:wrap}
+.btn{display:inline-block;padding:.7rem 1.3rem;border-radius:999px;font-weight:600;border:1px solid var(--accent)}
+.btn.primary{background:var(--accent);color:#fff}
+.btn.primary:hover{background:#155e75}
+.btn.ghost{background:#fff;color:var(--accent)}
+.card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:1.5rem;box-shadow:0 4px 20px rgba(0,0,0,.04)}
+.avatar-card{text-align:center}
+.avatar{width:120px;height:120px;border-radius:50%;background:linear-gradient(135deg,#0e7490,#22d3ee);display:flex;align-items:center;justify-content:center;color:#fff;font-size:2.5rem;font-weight:800;margin:0 auto 1rem}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
+.grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem}
+.tag{display:inline-block;background:#f5f5f4;border:1px solid var(--border);border-radius:999px;padding:.2rem .7rem;font-size:.82rem;margin:.2rem .2rem 0 0}
+footer{border-top:1px solid var(--border);text-align:center;padding:1.5rem;color:var(--muted);font-size:.9rem}
+.fade-up{opacity:0;transform:translateY(14px);animation:fadeUp .7s ease forwards}
+.fade-up.d1{animation-delay:.1s}.fade-up.d2{animation-delay:.2s}.fade-up.d3{animation-delay:.3s}
+@keyframes fadeUp{to{opacity:1;transform:none}}
+/* Timeline */
+.timeline{border-left:2px solid var(--border);margin-left:.5rem;padding-left:1.2rem}
+.job{margin-bottom:1.5rem;position:relative}
+.job::before{content:"";position:absolute;left:-1.65rem;top:.4rem;width:12px;height:12px;background:var(--accent);border-radius:50%;border:2px solid #fff;box-shadow:0 0 0 2px var(--accent)}
+.job h3{margin:.2rem 0}
+.meta{color:var(--muted);font-size:.9rem}
+/* Carousel */
+.carousel{position:relative;overflow:hidden;border-radius:var(--radius);border:1px solid var(--border);background:#fff}
+.slides{display:flex;transition:transform .45s ease}
+.slide{min-width:100%;padding:0}
+.slide-visual{height:260px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.4rem;font-weight:800;text-align:center;padding:1rem}
+.s1{background:linear-gradient(135deg,#0e7490,#06b6d4,#99f6e0)}
+.s2{background:linear-gradient(135deg,#7c3aed,#06b6d4)}
+.s3{background:linear-gradient(135deg,#ea580c,#facc15)}
+.s4{background:linear-gradient(135deg,#0f766e,#84cc16)}
+.slide-body{padding:1.3rem 1.4rem}
+.ctrl{position:absolute;top:110px;background:rgba(255,255,255,.9);border:1px solid var(--border);border-radius:50%;width:40px;height:40px;cursor:pointer;font-size:1.2rem}
+.prev{left:10px}.next{right:10px}
+.dots{text-align:center;padding:.8rem}
+.dot{display:inline-block;width:10px;height:10px;border-radius:50%;background:#d6d3d1;margin:0 4px;cursor:pointer;border:none;padding:0}
+.dot.active{background:var(--accent)}
+.proj-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:1.5rem}
+@media(max-width:760px){
+  .hero{grid-template-columns:1fr}
+  h1{font-size:2rem}
+  .grid2,.grid3,.proj-grid{grid-template-columns:1fr}
+  .links{display:none;flex-direction:column;position:absolute;top:60px;right:12px;background:#fff;border:1px solid var(--border);border-radius:12px;padding:.6rem;box-shadow:0 10px 30px rgba(0,0,0,.08)}
+  .links.open{display:flex}
+  .hamburger{display:block}
+}

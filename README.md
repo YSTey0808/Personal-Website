@@ -6,12 +6,12 @@ Plain HTML, CSS and vanilla JavaScript — no build step, no dependencies.
 
 | File | Purpose |
 | --- | --- |
-| `index.html` | Home — intro, stats, experience snapshot, featured projects, tech stack |
+| `index.html` | Home — intro, experience snapshot, featured projects, tech stack |
 | `projects.html` | All projects with category filters |
-| `resume.html` | Resume (use the *Print / Save as PDF* button for a clean PDF) |
+| `resume.html` | Resume |
 | `about.html` | Background, how I work, focus areas, contact |
 | `style.css` | Shared styles; light/dark themes via CSS custom properties |
-| `script.js` | Icons, theme toggle, scroll reveal, counters, typing, filters |
+| `script.js` | Icons, theme toggle, scroll reveal, typing, filters |
 
 Run locally by opening `index.html` in a browser, or serve the folder:
 

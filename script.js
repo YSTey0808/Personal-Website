@@ -30,7 +30,6 @@
     search: '<circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/>',
     layers: '<path d="m12 2 10 5-10 5L2 7l10-5z"/><path d="m2 17 10 5 10-5"/><path d="m2 12 10 5 10-5"/>',
     server: '<rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><path d="M6 6h.01M6 18h.01"/>',
-    printer: '<path d="M6 9V2h12v7"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/>',
     copy: '<rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>',
     check: '<path d="M20 6 9 17l-5-5"/>',
     trophy: '<path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/>',
@@ -89,31 +88,11 @@
   onScroll();
   toTop?.addEventListener('click', () => window.scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' }));
 
-  // ---------- Count-up numbers
-  const countUp = el => {
-    const to = parseFloat(el.dataset.to);
-    const decimals = parseInt(el.dataset.decimals || '0', 10);
-    if (reduceMotion || Number.isNaN(to)) return;
-    const duration = 1600;
-    const start = performance.now();
-    const step = now => {
-      const t = Math.min((now - start) / duration, 1);
-      const eased = 1 - Math.pow(1 - t, 3);
-      el.textContent = (to * eased).toFixed(decimals);
-      if (t < 1) requestAnimationFrame(step);
-    };
-    el.textContent = (0).toFixed(decimals);
-    requestAnimationFrame(step);
-  };
-
   // ---------- Scroll reveal (staggered within [data-stagger] groups)
   document.querySelectorAll('[data-stagger]').forEach(group => {
     [...group.children].forEach((child, i) => child.style.setProperty('--i', i));
   });
-  const revealed = el => {
-    el.classList.add('in');
-    el.querySelectorAll('.count').forEach(countUp);
-  };
+  const revealed = el => el.classList.add('in');
   if ('IntersectionObserver' in window && !reduceMotion) {
     const io = new IntersectionObserver(entries => {
       entries.forEach(entry => {
@@ -198,7 +177,7 @@
     });
   });
 
-  // ---------- Toast + copy email + print
+  // ---------- Toast + copy email
   const toast = document.querySelector('.toast');
   let toastTimer;
   const showToast = html => {
@@ -217,7 +196,6 @@
       window.location.href = `mailto:${text}`;
     }
   }));
-  document.querySelectorAll('[data-print]').forEach(btn => btn.addEventListener('click', () => window.print()));
 
   // ---------- Footer year
   document.querySelectorAll('[data-year]').forEach(el => { el.textContent = new Date().getFullYear(); });

@@ -232,15 +232,6 @@ strong{font-weight:650}
 .scroll-hint span{position:absolute;left:50%;top:7px;width:4px;height:8px;margin-left:-2px;border-radius:2px;background:var(--accent);animation:scrollDot 1.8s ease-in-out infinite}
 @keyframes scrollDot{0%{opacity:0;transform:translateY(0)}30%{opacity:1}100%{opacity:0;transform:translateY(12px)}}
 
-/* ---------- Stats ---------- */
-.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:0;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);
-  box-shadow:var(--shadow);overflow:hidden}
-.stat{padding:1.6rem 1.4rem;text-align:center;border-right:1px solid var(--border)}
-.stat:last-child{border-right:0}
-.stat-num{display:block;font-size:clamp(2rem,4vw,2.6rem);font-weight:800;letter-spacing:-.04em;line-height:1.1;font-variant-numeric:tabular-nums}
-.stat-num small{font-size:.5em;color:var(--subtle);font-weight:600;letter-spacing:0}
-.stat-label{display:block;color:var(--muted);font-size:.9rem;margin-top:.3rem}
-
 /* ---------- Experience list ---------- */
 .xp-list{display:grid;gap:1rem}
 .xp{display:grid;grid-template-columns:auto 1fr auto;gap:1.25rem;align-items:start}
@@ -418,9 +409,6 @@ strong{font-weight:650}
   .hero-inner,.about-grid,.resume-grid{grid-template-columns:1fr}
   .profile-card{max-width:420px;width:100%;margin:0 auto}
   .grid3{grid-template-columns:1fr}
-  .stats{grid-template-columns:repeat(2,1fr)}
-  .stat:nth-child(2){border-right:0}
-  .stat:nth-child(-n+2){border-bottom:1px solid var(--border)}
   .scroll-hint{display:none}
 }
 @media (max-width:760px){

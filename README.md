@@ -1,6 +1,6 @@
 # Personal Website — Tey Yee Siang
 
-Portfolio site: https://personalwebsite-eight-tawny-92.vercel.app
+Portfolio site: https://yeesiang-personalwebsite.vercel.app
 
 Plain HTML, CSS and vanilla JavaScript — no build step, no dependencies.
 

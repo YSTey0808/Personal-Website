@@ -10,7 +10,8 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="Projects — Tey Yee Siang">
 <meta property="og:description" content="LLM security, RAG, search agents and full-stack products — with measured results.">
-<meta property="og:url" content="https://personalwebsite-eight-tawny-92.vercel.app/projects.html">
+<meta property="og:url" content="https://yeesiang-personalwebsite.vercel.app/projects.html">
+<link rel="canonical" href="https://yeesiang-personalwebsite.vercel.app/projects.html">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230e7490'/%3E%3Ctext x='50%25' y='54%25' text-anchor='middle' dominant-baseline='middle' font-family='Arial,sans-serif' font-weight='800' font-size='28' fill='white'%3EYS%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -45,7 +46,7 @@
     <div class="container">
       <p class="eyebrow reveal">Projects</p>
       <h1 class="reveal" style="--i:1">Things I've <span class="grad">built & shipped</span></h1>
-      <p class="section-sub reveal" style="--i:2">Hackathon builds, internship work and AI projects. For each one I note what I owned and how it was measured — recall, Hit@10, MRR, pilot results — not just what the stack was.</p>
+      <p class="section-sub reveal" style="--i:2">Hackathon builds, open-source tools and AI projects. For each one I note what I owned and how it was measured — recall, Hit@10, MRR, pilot results — not just what the stack was.</p>
     </div>
   </section>
 
@@ -55,10 +56,35 @@
       <button class="filter" type="button" data-filter="ai" aria-pressed="false">AI & LLM</button>
       <button class="filter" type="button" data-filter="fullstack" aria-pressed="false">Full-Stack</button>
     </div>
-    <p class="result-count reveal" aria-live="polite">Showing 7 of 7 projects</p>
+    <p class="result-count reveal" aria-live="polite">Showing 8 of 8 projects</p>
 
     <div class="projects" data-stagger>
-      <!-- 1. Harm detection -->
+      <!-- 1. Quantelligence -->
+      <article class="card project lift reveal" data-cat="ai">
+        <div class="project-visual g8">
+          <svg class="ic" aria-hidden="true"><use href="#i-trend"/></svg>
+          <span class="project-badge">Binance Agentic AI Challenge · 2026</span>
+          <span class="project-headline">+1.2%<small>14-day live run</small></span>
+        </div>
+        <div class="project-body">
+          <h3>Quantelligence: Multi-Agent LLM Trading System</h3>
+          <p>LLM agents that traded bStocks autonomously over a 14-day live scored run, returning +1.2% in a falling market. An event listener and trigger gate decide when the agents run; technical, news and fundamentals analyst agents pass their findings to a quant trader, then a risk analyst, then a portfolio manager.</p>
+          <p class="project-role"><strong>My role:</strong> designed and built the agent-side architecture and owned all DevOps for a 4-person team, including the reliability plan (watcher VM, health APIs, standby price feed) for a run that allowed no manual intervention.</p>
+          <ul class="metrics">
+            <li><strong>Finalist</strong> (top 25) · 3rd-highest final total assets</li>
+            <li><strong>+1.2%</strong> over 14 days</li>
+            <li><strong>67</strong> scripted cases + a simulated trading week for the trigger gate</li>
+            <li><strong>Analyst claims</strong> checked in code against source data</li>
+          </ul>
+          <div class="tags"><span class="tag">Python</span><span class="tag">LangGraph</span><span class="tag">GCP (multi-VM)</span><span class="tag">Supabase</span><span class="tag">Postgres</span></div>
+          <!-- TODO: add Code link when the repo is public, e.g.
+          <div class="project-links">
+            <a href="https://github.com/YSTey0808/REPO" target="_blank" rel="noopener"><svg class="ic"><use href="#i-github"/></svg> Code</a>
+          </div> -->
+        </div>
+      </article>
+
+      <!-- 2. Harm detection -->
       <article class="card project lift reveal" data-cat="ai fullstack">
         <div class="project-visual g1">
           <svg class="ic" aria-hidden="true"><use href="#i-alert"/></svg>
@@ -82,7 +108,7 @@
         </div>
       </article>
 
-      <!-- 2. Shopping agent -->
+      <!-- 3. Shopping agent -->
       <article class="card project lift reveal" data-cat="ai">
         <div class="project-visual g2">
           <svg class="ic" aria-hidden="true"><use href="#i-bag"/></svg>
@@ -105,7 +131,7 @@
         </div>
       </article>
 
-      <!-- 3. Code Intent Analyser -->
+      <!-- 4. Code Intent Analyser -->
       <article class="card project lift reveal" data-cat="ai">
         <div class="project-visual g3">
           <svg class="ic" aria-hidden="true"><use href="#i-shield"/></svg>
@@ -119,7 +145,7 @@
           <ul class="metrics">
             <li><strong>Schema-constrained</strong> JSON verdicts</li>
             <li><strong>Prompt-injection</strong> tripwire</li>
-            <li><strong>0</strong> third-party deps</li>
+            <li><strong>Standard-library</strong> Python only (no pip dependencies)</li>
           </ul>
           <div class="tags"><span class="tag">Python</span><span class="tag">Ollama</span><span class="tag">GitHub Actions</span><span class="tag">LLM evaluation</span></div>
           <div class="project-links">
@@ -128,7 +154,7 @@
         </div>
       </article>
 
-      <!-- 4. Geo-compliance RAG -->
+      <!-- 5. Geo-compliance RAG -->
       <article class="card project lift reveal" data-cat="ai">
         <div class="project-visual g4">
           <svg class="ic" aria-hidden="true"><use href="#i-scale"/></svg>
@@ -150,7 +176,7 @@
         </div>
       </article>
 
-      <!-- 5. Care4You -->
+      <!-- 6. Care4You -->
       <article class="card project lift reveal" data-cat="fullstack">
         <div class="project-visual g5">
           <svg class="ic" aria-hidden="true"><use href="#i-heart"/></svg>
@@ -161,6 +187,7 @@
           <h3>Care4You — Community Activity App</h3>
           <p>A mobile app that makes it easier for people with intellectual disabilities, and their caregivers, to join community activities. Guests register without an account, and their sign-ups transfer automatically when they create one. Full events have waitlists that promote people automatically, and an LLM translates event details between English and Chinese.</p>
           <ul class="metrics">
+            <li><strong>Finalist</strong> (out of 50 teams)</li>
             <li><strong>Auto-promoting</strong> waitlists</li>
             <li><strong>EN ⇄ 中文</strong> LLM translation</li>
           </ul>
@@ -171,7 +198,7 @@
         </div>
       </article>
 
-      <!-- 6. RoamWise -->
+      <!-- 7. RoamWise -->
       <article class="card project lift reveal" data-cat="fullstack">
         <div class="project-visual g6">
           <svg class="ic" aria-hidden="true"><use href="#i-plane"/></svg>
@@ -192,7 +219,7 @@
         </div>
       </article>
 
-      <!-- 7. Grid Adventure capstone -->
+      <!-- 8. Grid Adventure capstone -->
       <article class="card project lift reveal" data-cat="ai">
         <div class="project-visual g7">
           <svg class="ic" aria-hidden="true"><use href="#i-grid"/></svg>

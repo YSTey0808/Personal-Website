@@ -46,7 +46,7 @@
     <div class="container">
       <p class="eyebrow reveal">Projects</p>
       <h1 class="reveal" style="--i:1">Things I've <span class="grad">built & shipped</span></h1>
-      <p class="section-sub reveal" style="--i:2">Hackathon builds, open-source tools and AI projects. For each one I note what I owned and how it was measured — recall, Hit@10, MRR, pilot results — not just what the stack was.</p>
+      <p class="section-sub reveal" style="--i:2">Hackathon builds, open-source tools and AI projects. For each one I note what I owned and how it was measured — recall, false-positive rate, Hit@10, MRR, pilot results — not just what the stack was.</p>
     </div>
   </section>
 
@@ -68,15 +68,16 @@
         </div>
         <div class="project-body">
           <h3>Quantelligence: Multi-Agent LLM Trading System</h3>
-          <p>LLM agents that traded bStocks autonomously over a 14-day live scored run, returning +1.2% in a falling market. An event listener and trigger gate decide when the agents run; technical, news and fundamentals analyst agents pass their findings to a quant trader, then a risk analyst, then a portfolio manager.</p>
-          <p class="project-role"><strong>My role:</strong> designed and built the agent-side architecture and owned all DevOps for a 4-person team, including the reliability plan (watcher VM, health APIs, standby price feed) for a run that allowed no manual intervention.</p>
+          <p>LLM agents that traded bStocks autonomously over a 14-day unattended live run, returning +1.2% in a falling market. An event-driven trigger gate (deterministic rules + LLM news classification) decides when the agents run; technical, news and fundamentals analyst agents, tuned via an LLM judge, pass their findings to a quant trader, then a risk analyst, then a portfolio manager. A claim-verification layer checks every analyst claim against source data and auto-rejects unsupported ones.</p>
+          <p class="project-role"><strong>My role:</strong> designed the LangGraph agent architecture and owned all DevOps for a 4-person team: deployment across two GCP VMs with a Postgres fallback, plus the reliability plan (recovery watcher, health APIs, standby price feed) for a run that allowed no manual intervention.</p>
           <ul class="metrics">
-            <li><strong>Finalist</strong> (top 25) · 3rd-highest final total assets</li>
-            <li><strong>+1.2%</strong> over 14 days</li>
-            <li><strong>67</strong> scripted cases + a simulated trading week for the trigger gate</li>
-            <li><strong>Analyst claims</strong> checked in code against source data</li>
+            <li><strong>Finalist</strong> (top 25) · 3rd of 25 finalist teams by final total assets</li>
+            <li><strong>+1.2%</strong> over a 14-day unattended live run</li>
+            <li><strong>97%</strong> of 1,800+ claims grounded across 134 live reports</li>
+            <li><strong>92%</strong> recall · <strong>3%</strong> false triggers on 80 scenarios (50 must-fire, 30 must-stay-quiet) + a simulated trading week</li>
+            <li><strong>90%</strong> fewer noise alerts after retuning</li>
           </ul>
-          <div class="tags"><span class="tag">Python</span><span class="tag">LangGraph</span><span class="tag">GCP (multi-VM)</span><span class="tag">Supabase</span><span class="tag">Postgres</span></div>
+          <div class="tags"><span class="tag">Python</span><span class="tag">LangGraph</span><span class="tag">LLM-as-judge</span><span class="tag">GCP (multi-VM)</span><span class="tag">Supabase</span><span class="tag">Postgres</span></div>
           <!-- TODO: add Code link when the repo is public, e.g.
           <div class="project-links">
             <a href="https://github.com/YSTey0808/REPO" target="_blank" rel="noopener"><svg class="ic"><use href="#i-github"/></svg> Code</a>
@@ -88,16 +89,16 @@
       <article class="card project lift reveal" data-cat="ai fullstack">
         <div class="project-visual g1">
           <svg class="ic" aria-hidden="true"><use href="#i-alert"/></svg>
-          <span class="project-badge">Huawei Tech4City · 2026</span>
-          <span class="project-headline">96.15%<small>accuracy</small></span>
+          <span class="project-badge">Huawei Tech4City · May – Aug 2026</span>
+          <span class="project-headline">96.04%<small>accuracy</small></span>
         </div>
         <div class="project-body">
           <h3>Real-Time Harm Detection Platform</h3>
-          <p>Flags grooming, scams and cyberbullying in code-mixed Singlish / Manglish chat, where off-the-shelf moderation models fail. Each conversation becomes a graph scored by a GraphSAGE GNN over XLM-RoBERTa embeddings, and an LLM reasoning stage explains every flag back in the chat within seconds.</p>
-          <p class="project-role"><strong>My role:</strong> owned the full web and hosting stack in a 5-person team (React/TS, FastAPI, Supabase Realtime, GCP) and drove end-to-end pipeline testing.</p>
+          <p>Flags grooming, scams and cyberbullying in code-mixed Singlish / Manglish chat, where off-the-shelf moderation models fail. Each conversation becomes a graph scored for risk by a GraphSAGE GNN over XLM-RoBERTa embeddings, and an LLM confirms the verdict and explains every flag back in the chat within seconds. Synthetic Singlish / Manglish conversations teach the model local slang that public datasets lack.</p>
+          <p class="project-role"><strong>My role:</strong> co-designed the detector and owned the platform end to end in a 5-person team — React/TS chat app, FastAPI, Supabase data layer and Realtime, GCP hosting — serving the detector in live chat and driving end-to-end pipeline testing.</p>
           <ul class="metrics">
-            <li><strong>96.15%</strong> accuracy</li>
-            <li><strong>100%</strong> harmful-actor detection</li>
+            <li><strong>96.04%</strong> accuracy on 227 conversations</li>
+            <li><strong>100%</strong> harmful-actor detection · <strong>1</strong> false flag</li>
             <li><strong>20-user</strong> pilot</li>
           </ul>
           <div class="tags"><span class="tag">GraphSAGE</span><span class="tag">XLM-RoBERTa</span><span class="tag">Claude Haiku</span><span class="tag">React + TS</span><span class="tag">FastAPI</span><span class="tag">Supabase</span><span class="tag">GCP</span></div>
@@ -117,11 +118,12 @@
         </div>
         <div class="project-body">
           <h3>Conversational Shopping Search Agent</h3>
-          <p>A multi-turn agent that finds a shopper's target among 50,000 catalog items. It turns customer words into catalog facets, fuses BM25, category and vector retrieval with reciprocal rank fusion, reranks, and picks each follow-up question by information gain.</p>
-          <p class="project-role"><strong>My role:</strong> led the dynamic-context module that carries constraints across turns.</p>
+          <p>A multi-turn agent that finds a shopper's target among 50,000 catalog items through a 3-stage pipeline (retrieve, rank, LLM rerank). It turns customer words into catalog facets, fuses BM25, category and vector retrieval with reciprocal rank fusion, reranks against a shopper profile, and uses a decision tree to pick the clarifying question that best splits the remaining candidates.</p>
+          <p class="project-role"><strong>My role:</strong> led integration and orchestration of the pipeline and wired the conversation loop end to end; built the LLM reranker, the clarifying-question decision tree, and the self-evolving context module that distils each conversation into a compact shopper profile and adapts the questioning strategy at runtime.</p>
           <ul class="metrics">
-            <li><strong>0.64</strong> MRR</li>
-            <li><strong>2.6</strong> turns to success</li>
+            <li><strong>98.5%</strong> Hit Rate@10</li>
+            <li><strong>2.6</strong> turns on average</li>
+            <li>MRR <strong>0.44 → 0.64</strong></li>
             <li><strong>8×</strong> the BM25 baseline score</li>
           </ul>
           <div class="tags"><span class="tag">Python</span><span class="tag">LangChain</span><span class="tag">SQLite FTS5</span><span class="tag">RRF</span><span class="tag">LLM rerank</span></div>
@@ -163,9 +165,10 @@
         </div>
         <div class="project-body">
           <h3>Geo-Compliance RAG Assistant</h3>
-          <p>Checks product features against 12 EU / US / SG / JP regulations and returns a compliance flag, reasoning, recommendations and a cited evidence trail. Uses law-aware chunking, query decomposition with RAG-Fusion (RRF), MMR retrieval over Chroma, and a human-feedback loop filtered by an LLM judge.</p>
-          <p class="project-role"><strong>My role:</strong> engineered the retrieval engine in a 4-person team and presented it to the technical judges.</p>
+          <p>Checks product features against 12 regulations from 4 jurisdictions (EU / US / SG / JP) and returns a structured verdict — compliance flag, reasoning, recommendations and cited laws. Uses law-aware chunking, OpenAI embeddings, query decomposition with RAG-Fusion (reciprocal rank fusion), MMR retrieval over Chroma, and a human-feedback loop filtered by an LLM judge.</p>
+          <p class="project-role"><strong>My role:</strong> built the RAG pipeline and retrieval engine in a 4-person team and presented it to the technical judges.</p>
           <ul class="metrics">
+            <li><strong>12</strong> regulations · <strong>4</strong> jurisdictions</li>
             <li><strong>~50%</strong> less manual review</li>
             <li><strong>CSV</strong> batch mode</li>
           </ul>
@@ -180,18 +183,20 @@
       <article class="card project lift reveal" data-cat="fullstack">
         <div class="project-visual g5">
           <svg class="ic" aria-hidden="true"><use href="#i-heart"/></svg>
-          <span class="project-badge">Hack4Good · 2026</span>
+          <span class="project-badge">Hack4Good · Jan – Feb 2026</span>
           <span class="project-headline">0-step<small>guest sign-up</small></span>
         </div>
         <div class="project-body">
           <h3>Care4You — Community Activity App</h3>
-          <p>A mobile app that makes it easier for people with intellectual disabilities, and their caregivers, to join community activities. Guests register without an account, and their sign-ups transfer automatically when they create one. Full events have waitlists that promote people automatically, and an LLM translates event details between English and Chinese.</p>
+          <p>A mobile app that makes it easier for people with intellectual disabilities, and their caregivers, to join community activities. Guests register without an account, and their sign-ups transfer automatically when they create one. Full events have waitlists that promote people automatically, attendees check in by QR code, and a cached LLM translation layer translates event details between English and Chinese.</p>
+          <p class="project-role"><strong>My role:</strong> co-built the app in a 3-person team (React Native, Node.js, Supabase).</p>
           <ul class="metrics">
             <li><strong>Finalist</strong> (out of 50 teams)</li>
+            <li><strong>QR</strong> check-in</li>
             <li><strong>Auto-promoting</strong> waitlists</li>
-            <li><strong>EN ⇄ 中文</strong> LLM translation</li>
+            <li><strong>EN ⇄ 中文</strong> cached LLM translation</li>
           </ul>
-          <div class="tags"><span class="tag">React Native</span><span class="tag">TypeScript</span><span class="tag">Supabase</span><span class="tag">LLM</span></div>
+          <div class="tags"><span class="tag">React Native</span><span class="tag">TypeScript</span><span class="tag">Node.js</span><span class="tag">Supabase</span><span class="tag">LLM</span></div>
           <div class="project-links">
             <a href="https://github.com/Hack4Funnn/care4you" target="_blank" rel="noopener"><svg class="ic"><use href="#i-github"/></svg> Code</a>
           </div>

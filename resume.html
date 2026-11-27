@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Resume — Tey Yee Siang</title>
-<meta name="description" content="Resume of Tey Yee Siang — NUS Computer Science (AI), GPA 4.59/5.0. Software Engineer Intern at SP Group (Jun – Nov 2026); previously Software Developer Intern at TechCircles.">
+<meta name="description" content="Resume of Tey Yee Siang — NUS Computer Science (AI & Software Engineering), GPA 4.59/5.0. Software Engineer Intern at SP Group (Jun – Nov 2026); previously Software Developer Intern at TechCircles.">
 <meta name="author" content="Tey Yee Siang">
 <meta name="theme-color" content="#0e7490">
 <meta property="og:type" content="profile">
 <meta property="og:title" content="Resume — Tey Yee Siang">
-<meta property="og:description" content="NUS CS (AI) · GPA 4.59/5.0 · SP Group, TechCircles · LLM security, RAG, full-stack.">
+<meta property="og:description" content="NUS CS (AI &amp; SWE) · GPA 4.59/5.0 · SP Group, TechCircles · LLM security, RAG, full-stack.">
 <meta property="og:url" content="https://yeesiang-personalwebsite.vercel.app/resume.html">
 <link rel="canonical" href="https://yeesiang-personalwebsite.vercel.app/resume.html">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230e7490'/%3E%3Ctext x='50%25' y='54%25' text-anchor='middle' dominant-baseline='middle' font-family='Arial,sans-serif' font-weight='800' font-size='28' fill='white'%3EYS%3C/text%3E%3C/svg%3E">
@@ -46,7 +46,7 @@
     <div class="container">
       <p class="eyebrow reveal">Resume</p>
       <h1 class="reveal" style="--i:1">Tey Yee Siang</h1>
-      <p class="section-sub reveal" style="--i:2">B.Comp. Computer Science (AI) at NUS, 2024 – 2028 · GPA 4.59 / 5.0 · Singapore<br>
+      <p class="section-sub reveal" style="--i:2">Year 3 B.Comp. Computer Science (AI &amp; Software Engineering) at NUS, 2024 – 2028 · GPA 4.59 / 5.0 · Singapore<br>
         <a href="mailto:ystey0808@gmail.com">ystey0808@gmail.com</a> · <a href="https://www.linkedin.com/in/yee-siang-tey/" target="_blank" rel="noopener">linkedin.com/in/yee-siang-tey</a> · <a href="https://github.com/YSTey0808" target="_blank" rel="noopener">github.com/YSTey0808</a></p>
       <div class="btns reveal" style="--i:3">
         <a class="btn primary" href="mailto:ystey0808@gmail.com"><svg class="ic"><use href="#i-mail"/></svg> Email me</a>
@@ -65,28 +65,28 @@
             <div class="tl-head"><h3>Software Engineer Intern</h3><span class="tl-meta">Jun 2026 – Nov 2026</span></div>
             <p class="tl-org">Singapore Power (SP) Group · Singapore</p>
             <ul>
-              <li>Built an <strong>LLM-powered PR security gate</strong> as a GitHub Action that runs a locally hosted open-source model (Ollama) to flag malicious code intent before merge — all inference stays on-premise.</li>
-              <li>Engineered the model harness end to end: structured JSON verdicts, fail-closed handling deliberately biased toward false positives, and tiered file prioritisation so large diffs fit the context window.</li>
-              <li>Built an evaluation suite — mock inference server plus 50 labelled PRs — and tuned the decision threshold on recall vs. false-positive rate, reaching <strong>100% recall</strong> on malicious-intent cases.</li>
+              <li>Engineered an <strong>LLM-powered PR security gate</strong> in CI (GitHub Actions, self-hosted <strong>qwen2.5-coder</strong> via Ollama) that returns structured JSON verdicts before merge, with fail-closed handling, risk-based file prioritisation and diff chunking — all inference stays on-premise.</li>
+              <li>Hardened the gate against prompt injection, truncation bypass and fail-open paths; reached <strong>100% recall</strong> on malicious PRs with <strong>under 10% false positives</strong> on a <strong>200-PR</strong> labelled test set, using a mock model server and a threshold sweep.</li>
+              <li>Automated device follow-ups (outdated Windows, vulnerabilities, iPad data use): workflows nudged <strong>3,000+ users</strong> and escalated to supervisors; built a <strong>Copilot Studio</strong> agent so staff can track post-rollout stats in plain English.</li>
               <li>Configured automated <strong>Dependabot</strong> patching on GitHub Enterprise Server with rootless Docker self-hosted runners, gated on test-coverage checks before updates roll out.</li>
             </ul>
-            <div class="tags"><span class="tag">LLM Security</span><span class="tag">Ollama</span><span class="tag">GitHub Actions</span><span class="tag">GHES</span><span class="tag">Docker</span></div>
+            <div class="tags"><span class="tag">LLM Security</span><span class="tag">Ollama</span><span class="tag">GitHub Actions</span><span class="tag">GHES</span><span class="tag">Docker</span><span class="tag">Copilot Studio</span></div>
           </li>
           <li>
             <div class="tl-head"><h3>Teaching Assistant</h3><span class="tl-meta">AY25/26</span></div>
             <p class="tl-org">NUS School of Computing · Singapore</p>
             <ul>
-              <li><strong>CS2030S Programming Methodology II (Java)</strong>: ran weekly lab sessions (AY25/26 Sem 2).</li>
-              <li><strong>CS1101S Programming Methodology I</strong>: taught a weekly tutorial group (AY25/26 Sem 1).</li>
+              <li><strong>CS2030S Programming Methodology II (Java, OOP)</strong>: ran weekly lab sessions (AY25/26 Sem 2).</li>
+              <li><strong>CS1101S Programming Methodology I (JavaScript)</strong>: taught a weekly tutorial group (AY25/26 Sem 1).</li>
             </ul>
-            <div class="tags"><span class="tag">Java</span><span class="tag">Teaching</span></div>
+            <div class="tags"><span class="tag">Java</span><span class="tag">JavaScript</span><span class="tag">Teaching</span></div>
           </li>
           <li>
             <div class="tl-head"><h3>Software Developer Intern</h3><span class="tl-meta">Jan 2024 – May 2024</span></div>
             <p class="tl-org">TechCircles · Johor Bahru, Malaysia</p>
             <ul>
-              <li>Built a full-stack <strong>workflow-approval system</strong> (CakePHP, MySQL) that digitised a paper-based internal process, cutting approval turnaround by <strong>50%</strong>.</li>
-              <li>Integrated <strong>AirAsia</strong> REST APIs and wrote Postman integration and API tests across 3 projects to catch defects before release.</li>
+              <li>Engineered an automated <strong>workflow-approval system</strong> from client requirements in a <strong>5-person Agile team</strong> (CakePHP / PHP, MySQL), replacing a paper-based process and cutting approval turnaround by <strong>~60%</strong>.</li>
+              <li>Integrated <strong>AirAsia's membership-points API</strong> into a mall's member management system, collaborating with AirAsia's team and writing Postman integration and API tests that validated the integration across <strong>3 projects</strong>.</li>
             </ul>
             <div class="tags"><span class="tag">CakePHP</span><span class="tag">MySQL</span><span class="tag">REST APIs</span><span class="tag">Postman</span></div>
           </li>
@@ -97,12 +97,12 @@
       <article class="card reveal">
         <h2 class="card-title"><svg class="ic"><use href="#i-code"/></svg> Selected projects</h2>
         <ul class="mini-projects">
-          <li><div><b>Quantelligence: Multi-Agent LLM Trading System</b><span>Analyst, trader, risk and portfolio-manager LLM agents that traded bStocks over a 14-day live run; +1.2% in a falling market. Built the agent architecture and owned DevOps. Finalist (top 25) · 3rd-highest final total assets.</span></div><em>Binance AI 2026</em></li>
-          <li><div><b>Real-Time Harm Detection Platform</b><span>GNN + XLM-RoBERTa + LLM for Singlish / Manglish harm. Owned web + hosting stack. 96.15% accuracy.</span></div><em>Tech4City 2026</em></li>
-          <li><div><b>Conversational Shopping Search Agent</b><span>Hybrid retrieval + RRF over 50k products. 98.5% Hit@10, 0.64 MRR, 2.6 turns.</span></div><em>TechJam 2026</em></li>
+          <li><div><b>Quantelligence: Multi-Agent LLM Trading System</b><span>LangGraph analyst, trader, risk and portfolio-manager agents that traded bStocks over a 14-day unattended live run; +1.2% in a falling market. Claim verification grounded 97% of 1,800+ claims across 134 live reports; trigger gate hit 92% recall with 3% false triggers on 80 scenarios. Built the agent architecture and owned DevOps (two GCP VMs, Postgres fallback, recovery watcher). Finalist (top 25) · 3rd of 25 finalist teams by final total assets.</span></div><em>Binance AI 2026</em></li>
+          <li><div><b>Real-Time Harm Detection Platform</b><span>GNN over conversation graphs (XLM-RoBERTa embeddings) + LLM confirmation for Singlish / Manglish grooming, scams and bullying, trained with synthetic local-slang data. Co-designed the detector and owned the platform end to end. 96.04% accuracy on 227 conversations; every harmful actor flagged with 1 false flag in a 20-user pilot.</span></div><em>Tech4City 2026</em></li>
+          <li><div><b>Conversational Shopping Search Agent</b><span>3-stage pipeline (retrieve, rank, LLM rerank) over 50k products; led integration and built the LLM reranker, clarifying-question decision tree and self-evolving context module. 98.5% Hit@10 in 2.6 turns; MRR 0.44 → 0.64.</span></div><em>TechJam 2026</em></li>
           <li><div><b>Code Intent Analyser</b><span>Open-source, fail-safe LLM PR security gate on local Ollama. Standard-library Python only (no pip dependencies).</span></div><em>Open source</em></li>
-          <li><div><b>Geo-Compliance RAG Assistant</b><span>RAG over 12 regulations with RAG-Fusion, MMR and cited evidence. ~50% less manual review.</span></div><em>TechJam 2025</em></li>
-          <li><div><b>Care4You</b><span>React Native app for accessible community sign-ups, with LLM translation. Finalist (out of 50 teams).</span></div><em>Hack4Good 2026</em></li>
+          <li><div><b>Geo-Compliance RAG Assistant</b><span>RAG over 12 regulations from 4 jurisdictions with query decomposition, MMR, reciprocal rank fusion and cited laws. ~50% less manual review.</span></div><em>TechJam 2025</em></li>
+          <li><div><b>Care4You</b><span>React Native / Node.js / Supabase app (3-person team) for accessible community sign-ups, with cached LLM translation and QR check-in. Finalist (out of 50 teams).</span></div><em>Hack4Good 2026</em></li>
           <li><div><b>RoamWise</b><span>Collaborative AI trip planner (React, Firebase). Honourable Mention, top public vote.</span></div><em>NUS Orbital</em></li>
         </ul>
         <p style="margin:1rem 0 0" class="no-print"><a class="link-arrow" href="projects.html">Details, metrics and code <svg class="ic"><use href="#i-arrow-right"/></svg></a></p>
@@ -114,8 +114,8 @@
       <article class="card edu reveal" style="--i:1">
         <h2 class="card-title"><svg class="ic"><use href="#i-cap"/></svg> Education</h2>
         <h3>National University of Singapore</h3>
-        <p class="tl-org">B.Comp. Computer Science · AI specialisation</p>
-        <p class="tl-meta" style="margin-bottom:.8rem">Aug 2024 – May 2028</p>
+        <p class="tl-org">B.Comp. Computer Science · Specialisations in AI and Software Engineering</p>
+        <p class="tl-meta" style="margin-bottom:.8rem">Year 3 · Aug 2024 – May 2028</p>
         <ul class="metrics"><li><strong>4.59 / 5.0</strong> GPA</li><li><strong>Highest</strong> Distinction</li></ul>
         <p style="font-size:.92rem">Coursework: AI & Machine Learning, Data Structures & Algorithms, Software Engineering, Probability & Statistics, Databases, Computer Networks, Operating Systems.</p>
         <h3 style="margin-top:1.2rem">Foon Yew High School</h3>
@@ -128,10 +128,10 @@
         <h2 class="card-title"><svg class="ic"><use href="#i-sparkles"/></svg> Skills</h2>
         <div class="kv">
           <div><h4>Languages</h4><div class="tags"><span class="tag">Python</span><span class="tag">Java</span><span class="tag">TypeScript</span><span class="tag">JavaScript</span><span class="tag">C++</span><span class="tag">Go</span><span class="tag">SQL</span><span class="tag">Bash</span></div></div>
-          <div><h4>AI / ML</h4><div class="tags"><span class="tag">PyTorch</span><span class="tag">GNNs (GraphSAGE, GATv2)</span><span class="tag">XLM-RoBERTa</span><span class="tag">CNNs</span><span class="tag">NumPy</span><span class="tag">Pandas</span></div></div>
-          <div><h4>LLM & Agents</h4><div class="tags"><span class="tag">LangChain</span><span class="tag">OpenAI / Anthropic APIs</span><span class="tag">Ollama</span><span class="tag">RAG</span><span class="tag">Reranking</span><span class="tag">MCP</span><span class="tag">Structured outputs</span><span class="tag">Vector search</span></div></div>
-          <div><h4>Web</h4><div class="tags"><span class="tag">React</span><span class="tag">React Native</span><span class="tag">Node.js</span><span class="tag">Express</span><span class="tag">FastAPI</span><span class="tag">CakePHP</span></div></div>
-          <div><h4>Cloud, DevOps & Data</h4><div class="tags"><span class="tag">Docker</span><span class="tag">Kubernetes (AKS)</span><span class="tag">GCP</span><span class="tag">Azure</span><span class="tag">GitHub Actions</span><span class="tag">PostgreSQL</span><span class="tag">MySQL</span><span class="tag">Supabase</span><span class="tag">Firebase</span></div></div>
+          <div><h4>AI / ML</h4><div class="tags"><span class="tag">PyTorch</span><span class="tag">Hugging Face Transformers</span><span class="tag">GNNs (GraphSAGE, GATv2)</span><span class="tag">XLM-RoBERTa</span><span class="tag">Embeddings</span><span class="tag">CNNs</span><span class="tag">NumPy</span><span class="tag">Pandas</span></div></div>
+          <div><h4>LLM & Agents</h4><div class="tags"><span class="tag">LangGraph</span><span class="tag">LangChain</span><span class="tag">OpenAI / Azure OpenAI</span><span class="tag">Anthropic API</span><span class="tag">Ollama</span><span class="tag">RAG</span><span class="tag">LLM-as-judge</span><span class="tag">Prompt-injection defence</span><span class="tag">Reranking</span><span class="tag">MCP</span><span class="tag">Structured outputs</span></div></div>
+          <div><h4>Web</h4><div class="tags"><span class="tag">React</span><span class="tag">React Native</span><span class="tag">Node.js</span><span class="tag">Express</span><span class="tag">FastAPI</span><span class="tag">Spring</span><span class="tag">REST APIs</span><span class="tag">CakePHP</span></div></div>
+          <div><h4>Cloud, DevOps & Data</h4><div class="tags"><span class="tag">Docker</span><span class="tag">Kubernetes (Azure AKS)</span><span class="tag">GCP</span><span class="tag">Azure</span><span class="tag">GitHub Actions (CI/CD)</span><span class="tag">PostgreSQL</span><span class="tag">MySQL</span><span class="tag">Redis</span><span class="tag">Chroma (vector DB)</span><span class="tag">Supabase</span><span class="tag">Firebase</span></div></div>
         </div>
       </article>
 
@@ -139,8 +139,8 @@
       <article class="card reveal" style="--i:3">
         <h2 class="card-title"><svg class="ic"><use href="#i-trophy"/></svg> Leadership & awards</h2>
         <ul class="awards">
-          <li><svg class="ic"><use href="#i-users"/></svg><div><b>President, NUS Malaysian Students' League</b><span>Aug 2025 – Jul 2026, now Advisor · Led a 40+ member exco serving 400+ students; secured SGD 5,000 sponsorship with 10+ partners incl. the Malaysian High Commission.</span></div></li>
-          <li><svg class="ic"><use href="#i-trophy"/></svg><div><b>Finalist, Binance "Beyond the Benchmark" Agentic AI Challenge 2026</b><span>DoraHacks · Quantelligence · top 25 · 3rd-highest final total assets.</span></div></li>
+          <li><svg class="ic"><use href="#i-users"/></svg><div><b>President, NUS Malaysian Students' League</b><span>Aug 2025 – Jul 2026, now Advisor · Led a 40+ member committee serving 400+ students; raised SGD 5,000 from 10+ sponsors incl. the Malaysian High Commission; ran a 100-person alumni event.</span></div></li>
+          <li><svg class="ic"><use href="#i-trophy"/></svg><div><b>Finalist, Binance "Beyond the Benchmark" Agentic AI Challenge 2026</b><span>DoraHacks · Quantelligence · top 25 · 3rd of 25 finalist teams by final total assets.</span></div></li>
           <li><svg class="ic"><use href="#i-trophy"/></svg><div><b>Finalist, Hack4Good 2026</b><span>Care4You · out of 50 teams.</span></div></li>
           <li><svg class="ic"><use href="#i-trophy"/></svg><div><b>Honourable Mention, NUS Orbital</b><span>Artemis level · highest public vote count in the cohort.</span></div></li>
           <li><svg class="ic"><use href="#i-trophy"/></svg><div><b>Olympiads &amp; competitions</b><span>Malaysian National Mathematical Olympiad (OMK), Top 5% · XMUM Physics Cup, Top 20 · XMUM Chen Jingrun Mathematics Competition, 7th in the Southern Region.</span></div></li>
